@@ -26,4 +26,8 @@ Guition 480x480 ESP32-4848S040: [AliExpress](https://www.aliexpress.com/item/100
 **General**
 - Status of connection with HA Top/right icon 
 - Boot page with HA logo and spinner
-- Screen backlight timer. On touch 100% > 30s > 50% > 15min > 35% > 15min > off 0% > LCD antiburn on (snow animation)
+- Screen backlight timer:
+  - On touch ➝ 100%
+  - 30s ➝ 50%
+  - 15min ➝ 35%
+  - 15min ➝ off 0% + LCD antiburn on (snow animation)
