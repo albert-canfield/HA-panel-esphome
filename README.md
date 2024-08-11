@@ -1,6 +1,6 @@
-Home Assistant Wall/deck panel
+# Home Assistant Wall/deck panel
 
-This project uses EspHome and LVGL library.
+This project uses [ESPHome](https://esphome.io) and [LVGL library](https://lvgl.io).
 
 <img src="https://community-assets.home-assistant.io/original/4X/1/3/3/1339b489be02221adcba378b4462c97992f19f59.jpeg" />
 
