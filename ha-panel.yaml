@@ -624,7 +624,7 @@ number:
   
 sensor:
   - platform: uptime
-    name: Uptime
+    id: uptime_internal
 
   - platform: homeassistant
     id: house_setpoint_ha
@@ -731,6 +731,20 @@ text_sensor:
             text: 
               format: "\U000F050F %s °C"
               args: ["id(ha_weather_temp).state.c_str()"]
+  
+  - platform: template
+    name: Uptime
+    lambda: |-
+      int seconds = (id(uptime_internal).state);
+      int days = seconds / (24 * 3600);
+      seconds = seconds % (24 * 3600); 
+      int hours = seconds / 3600;
+      seconds = seconds % 3600;
+      int minutes = seconds /  60;
+      seconds = seconds % 60;
+      return { ( std::to_string(days) + "d " + std::to_string(hours) + "h " + std::to_string(minutes) + "m " + std::to_string(seconds) + "s").c_str() };
+    icon: mdi:clock-start
+    update_interval: 60s
  
 binary_sensor:
   - platform: homeassistant
